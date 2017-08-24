@@ -1,0 +1,10 @@
+#!/bin/bash
+
+MAX=$1
+for arg in "$@"; do
+	if [ $arg -gt $MAX  ]; then
+		MAX=$arg	
+	fi
+done
+
+echo "$MAX"

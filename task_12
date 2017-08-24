@@ -1,0 +1,19 @@
+#!/bin/bash
+
+a1=0
+a2=0
+
+printf "Input first variable: "
+read a1
+printf "Input second variable: "
+read a2
+printf "Input number of variable you want to output: "
+read var_num
+
+if [ $var_num -eq 1 ]; then
+	echo "$a1"
+elif [ $var_num -eq 2 ]; then
+	echo "$a2"
+else
+	echo "Wrong number of variable!"
+fi

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+prefix=""
+suffix1=""
+suffix2=""
+
+a1=0
+a2=0
+
+suffix=""
+
+printf "Enter value of prefix: "
+read prefix
+
+printf "Enter value of suffix 1: "
+read suffix1
+printf "Enter value of suffix 2: "
+read suffix2
+
+printf "Enter $prefix$suffix1: "
+read a1
+printf "Enter $prefix$suffix2: "
+read a2
+
+printf "Enter suffix: "
+read suffix
+
+if [ "$suffix" == "$suffix1" ]; then
+	echo "$a1"
+elif [ "$suffix" == "$suffix2" ]; then
+	echo "$a2"
+else
+	echo "Wrong suffix!"
+fi

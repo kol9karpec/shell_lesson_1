@@ -1,0 +1,22 @@
+#! /bin/sh
+
+fizz="Fizz"
+buzz="Buzz"
+
+for i in `seq 1 100`; do
+	result=""
+
+	if [ $((i % 5)) -eq 0 ]; then
+		result=$fizz
+	fi
+	
+	if [ $((i % 3)) -eq 0 ]; then
+		result=$result$buzz
+	fi
+
+	if [ -z "$result" ]; then
+		echo $i
+	else
+		echo $result
+	fi
+done

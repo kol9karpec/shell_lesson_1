@@ -1,0 +1,15 @@
+#!/bin/bash
+
+result=false
+for number in `seq 1 100`; do
+	result=true
+	for arg in "$@"; do
+		if [ $((number % arg)) -ne 0 ]; then
+			result=false
+			break
+		fi
+	done
+	if $result; then
+		echo $number
+	fi
+done

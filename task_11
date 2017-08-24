@@ -1,0 +1,6 @@
+#!/bin/bash
+
+NLINE=1
+for var in `ls /bin`; do
+	echo "line $((NLINE++)): $var"
+done
